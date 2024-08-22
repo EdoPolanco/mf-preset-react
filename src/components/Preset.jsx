@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Preset = ({draggedColor, presetList, handleTitleChange, handleConjuntoChange, handleDrop, handleRemoveConjunto}) => {
+const Preset = ({draggedColor, presetList = [], handleTitleChange, handleConjuntoChange, handleDrop, handleRemoveConjunto}) => {
     return (
         <>
-          {presetList.map((preset, presetIndex) => (
+          { presetList.length > 0 ? ( presetList.map((preset, presetIndex) => (
             <div key={preset.id} className="col-12 col-md-4 mb-3">
               <div className="card">
                 <div className="card-header">
@@ -68,7 +68,9 @@ const Preset = ({draggedColor, presetList, handleTitleChange, handleConjuntoChan
             </div>
           </div>
         </div>
-          ))}
+          ))) : (  <div className="alert alert-danger" role='alert'>
+            <b>nothing here yet ... </b>
+          </div>)}
         </>
       );
 }
