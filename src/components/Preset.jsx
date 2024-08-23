@@ -59,7 +59,7 @@ const Preset = ({draggedColor, presetList = [], handleTitleChange, handleConjunt
                     
                   </div>))) : 
                   (
-                  <div className="alert alert-danger" role='alert'>
+                  <div className="alert alert-danger mt-3" role='alert'>
                     <b>Aun no arrastras tus elementos</b>
                   </div>
                   )  
@@ -68,7 +68,7 @@ const Preset = ({draggedColor, presetList = [], handleTitleChange, handleConjunt
             </div>
           </div>
         </div>
-          ))) : (  <div className="alert alert-danger" role='alert'>
+          ))) : (  <div className="alert alert-danger mt-3" role='alert'>
             <b>nothing here yet ... </b>
           </div>)}
         </>
