@@ -23,11 +23,10 @@ export const usePreset = () => {
       const handleDrop = (presetIndex, draggedColor) => {
         if (draggedColor) {
             const updatedPresets = [...presetList];
-            const conjunto = updatedPresets[presetIndex].conjunto || []; // Asegúrate de que conjunto no sea undefined
-    
-            // Inserta un nuevo objeto en el arreglo conjunto
+            const conjunto = updatedPresets[presetIndex].conjunto || [];
+
             conjunto.push({
-                name: `conjunto-${conjunto.length + 1}`, // Incrementa el número del nombre basado en la longitud actual
+                name: `conjunto-${conjunto.length + 1}`,
                 color: draggedColor
             });
     
@@ -41,9 +40,8 @@ export const usePreset = () => {
       const conjunto = updatedPresets[presetIndex].conjunto;
   
       if (conjunto && conjunto.length > 0) {
-          conjunto.splice(conjuntoIndex, 1); // Elimina el conjunto en el índice especificado
+          conjunto.splice(conjuntoIndex, 1);
   
-          // Actualizar los nombres de los conjuntos restantes
           conjunto.forEach((item, index) => {
               item.name = `conjunto-${index + 1}`;
           });
